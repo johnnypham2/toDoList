@@ -1,0 +1,36 @@
+body {
+  background-color: bisque;
+}
+.myContainer {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%,-30%);
+}
+.addButton{
+  border: none;
+  border-radius: 5px;
+  background-color: darkgreen;
+  color: whitesmoke;
+  font-size: 16px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.addButton:hover{
+  opacity: 30%;
+  cursor: pointer;
+}
+.todo-text-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.todo-text-button.completed {
+  text-decoration: line-through;
+  color: gray;
+}
