@@ -8,11 +8,11 @@ interface TodoItem {
 
 //input todo list
 const Todo = () => {
-  // State for input value
+  
   const [input, setInput] = useState("");
-  // State for the list of todo items
+  
   const [list, setList] = useState<TodoItem[]>([]);
-  // Function to add a new todo item to the list
+  
   const addTodo = (newItem: string) => {
     // Create a new todo item object with a random ID
     const newTodo: TodoItem = {
@@ -35,26 +35,33 @@ const Todo = () => {
     );
   };
 
+
+  //DELETE FUNCTION 
+  const deleteTodo = (itemId: number) => {
+    setList((prevList) => prevList.filter((item) => item.id !== itemId));
+  };
+
+
+
+
   return (
     <>
       <div className="myContainer">
         <div className="row">
           <h1>Todo List</h1>
-
-          {/* Input field for entering new todo items */}
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
 
-          {/* Button to add a new todo item */}
+          {/* Button to add a new todo item*/}
           <button className="addButton" onClick={() => addTodo(input)}>
             Add
           </button>
         </div>
 
-        {/* Display the list of todo items */}
+        {/*Display todo items*/}
         <ul>
           {list.map((item) => (
             <li key={item.id} className={item.completed ? "completed" : ""}>
@@ -67,8 +74,8 @@ const Todo = () => {
                 {item.todo}
               </button>
 
-              {/* Button to delete the todo item (not implemented yet) */}
-              <button>x</button>
+              {/*Button to delete*/}
+              <button onClick={() => deleteTodo(item.id)}>x</button>
             </li>
           ))}
         </ul>
