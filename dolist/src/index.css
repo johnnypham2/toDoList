@@ -1,17 +1,18 @@
 body {
-  background-color: bisque;
+  background-color: rgb(247, 188, 188);
+  font-family: Arial, sans-serif;
 }
 .myContainer {
   position: absolute;
-  top: 40%;
-  left: 45%;
+  top: 20%;
+  left: 50%;
   transform: translate(-50%,-30%);
 }
 .addButton{
   border: none;
   border-radius: 5px;
-  background-color: darkgreen;
-  color: whitesmoke;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 16px;
   margin: 5px;
   padding: 5px;
@@ -28,9 +29,26 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+  font-size: 24px;
+  margin-right: 10px;
 }
 
 .todo-text-button.completed {
   text-decoration: line-through;
   color: gray;
+  font-size: 24px;
+}
+.deleteButton {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.editButton {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
