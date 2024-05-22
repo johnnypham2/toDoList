@@ -1,7 +1,10 @@
-body {
-  background-color: rgb(247, 188, 188);
-  font-family: Arial, sans-serif;
+.bg {
+  background-color: aliceblue;
+  display: flex;
+  flex: 1;
+  height: 100vh;
 }
+
 .myContainer {
   position: absolute;
   top: 20%;
@@ -23,7 +26,7 @@ body {
   cursor: pointer;
 }
 .todo-text-button {
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
   padding: 0;
   cursor: pointer;
@@ -33,11 +36,6 @@ body {
   margin-right: 10px;
 }
 
-.todo-text-button.completed {
-  text-decoration: line-through;
-  color: gray;
-  font-size: 24px;
-}
 .deleteButton {
   background-color: red;
   color: white;
@@ -51,4 +49,8 @@ body {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }
